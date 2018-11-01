@@ -1,1 +1,1 @@
-aweb: node app.js
+aweb: node server.js
