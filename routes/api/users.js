@@ -55,7 +55,7 @@ class Router {
           err.status = 401
         }else{
           
-          mq.connectt(user.device_url , user.device_port , user.device_name,user.device_password,body.message,body.email)
+          mq.connectt(user.device_url , parseInt(user.device_port) , user.device_name,user.device_password,body.message,body.email)
           res.json(user)
         }
       

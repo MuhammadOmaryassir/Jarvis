@@ -28,13 +28,13 @@ const UserSchema = new mongoose.Schema({
   device_name: {
     type: String,
     required: true,
-    unique: true,
+    unique: false,
     trim: true
   },
   device_url: {
     type: String,
     required: true,
-    unique: true,
+    unique: false,
     trim: true
   },
   lamp1: {
@@ -53,7 +53,7 @@ const UserSchema = new mongoose.Schema({
   device_port: {
     type: String,
     required: true,
-    unique: true,
+    unique: false,
     trim: true
   }
 })
