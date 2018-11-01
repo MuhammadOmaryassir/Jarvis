@@ -1,8 +1,10 @@
 var mqtt = require('mqtt')
 let User = require('./models/Users')
+
+
 let x = function (message){
 let email = 'test@tesft.com' 
-User.findOne({ email: email }).exec(function (err, user) {
+User.findOne({ email: email },function (err, user) {
 console.log('555') 
   if (err) {
     console.log("messages");
@@ -19,13 +21,22 @@ console.log('555')
       else if (message == '5'){ 
         console.log('5')   
         user.lamp3 = true
-        console.log(user.lamp1)
+        user.save(function(err,update){
+            if (err) {
+                console.log("messages");
+                res.json(err)}
+
+        })
+        console.log(user.lamp3)
     }
       else if (message == '6'){ user.lamp3 = false}
       
     
   }
 }) }
+
+
+
 let send = function  (url,port,username,password,messages,email){
 var options = {
     port: port,

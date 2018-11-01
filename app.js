@@ -71,4 +71,4 @@ let server = new Server(port)
 server.Connect()
 server.bodyParser()
 
-
+module.exports = app
