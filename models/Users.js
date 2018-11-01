@@ -28,7 +28,7 @@ const UserSchema = new mongoose.Schema({
   device_name: {
     type: String,
     required: true,
-    unique: false,
+    unique: true,
     trim: true
   },
   device_url: {
