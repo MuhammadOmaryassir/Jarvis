@@ -2,9 +2,8 @@ var mqtt = require('mqtt')
 let User = require('./models/Users')
 
 
-let x = function (message){
-let email = 'test@tesft.com' 
-User.findOne({ email: email },function (err, user) {
+let x = function (message,email){
+User.findOne({ email: email }).exec(function (err, user) {
 console.log('555') 
   if (err) {
     console.log("messages");
@@ -58,7 +57,7 @@ client.on('connect', function() { // When connected
     client.subscribe('Test', function() {
         // when a message arrives, do something with it
         client.on('message', function(topic, message, packet) {
-        x(message)
+        x(message,email)
         console.log("Received '" + message + "' on '" + topic + "'");
        
     }) 
