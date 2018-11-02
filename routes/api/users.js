@@ -61,7 +61,7 @@ class Router {
             try {
 
               mq.connectt(user.device_url, parseInt(user.device_port), user.device_name, user.device_password, body.message, body.email)
-            } catch (err) { res.send(err,"this email is having wrong data") }
+            } catch (err) { res.send(302,"this mail has worng Data cant connect to your smart home") }
             res.json(user)
           }
 
