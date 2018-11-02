@@ -16,71 +16,71 @@ let x = function (message, email) {
         } else {
             if (message == '1') {
                 user.lamp1 = true
-                user.save(function (err, update) {
-                    if (err) {
-                        console.log("messages");
-                        res.json(err)
-                    }
+//                 user.save(function (err, update) {
+//                     if (err) {
+//                         console.log("messages");
+//                         res.json(err)
+//                     }
 
-                })
+//                 })
                 console.log(user.lamp1)
             }
             else if (message == '2') {
                 user.lamp1 = false
-                user.save(function (err, update) {
-                    if (err) {
-                        console.log("messages");
-                        res.json(err)
-                    }
+//                 user.save(function (err, update) {
+//                     if (err) {
+//                         console.log("messages");
+//                         res.json(err)
+//                     }
 
-                })
+//                 })
                 console.log(user.lamp1)
             }
             else if (message == '3') {
                 user.lamp2 = true
-                user.save(function (err, update) {
-                    if (err) {
-                        console.log("messages");
-                        res.json(err)
-                    }
+//                 user.save(function (err, update) {
+//                     if (err) {
+//                         console.log("messages");
+//                         res.json(err)
+//                     }
 
-                })
+//                 })
                 console.log(user.lamp2)
             }
             else if (message == '4') {
 
                 user.lamp2 = false
-                user.save(function (err, update) {
-                    if (err) {
-                        console.log("messages");
-                        res.json(err)
-                    }
+//                 user.save(function (err, update) {
+//                     if (err) {
+//                         console.log("messages");
+//                         res.json(err)
+//                     }
 
 
-                })
+//                 })
                 console.log(user.lamp2)
             }
             else if (message == '5') {
                 console.log('5')
                 user.lamp3 = true
-                user.save(function (err, update) {
-                    if (err) {
-                        console.log("messages");
-                        res.json(err)
-                    }
+//                 user.save(function (err, update) {
+//                     if (err) {
+//                         console.log("messages");
+//                         res.json(err)
+//                     }
 
-                })
+//                 })
                 console.log(user.lamp3)
             }
             else if (message == '6') {
             user.lamp3 = false
-                user.save(function (err, update) {
-                    if (err) {
-                        console.log("messages");
-                        res.json(err)
-                    }
+//                 user.save(function (err, update) {
+//                     if (err) {
+//                         console.log("messages");
+//                         res.json(err)
+//                     }
 
-                })
+//                 })
                 console.log(user.lamp3)
             }
 
