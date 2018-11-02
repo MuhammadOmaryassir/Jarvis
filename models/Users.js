@@ -13,7 +13,7 @@ const UserSchema = new mongoose.Schema({
       message: '{VALUE} is not a valid email'
     }
   },
-  
+
   password: {
     type: String,
     required: true,
@@ -22,7 +22,7 @@ const UserSchema = new mongoose.Schema({
   device_password: {
     type: String,
     required: true,
-    
+
 
   },
   device_name: {
@@ -39,15 +39,15 @@ const UserSchema = new mongoose.Schema({
   },
   lamp1: {
     type: Boolean,
-    default:false
+    default: false
   },
   lamp2: {
     type: Boolean,
-    default:false
+    default: false
   },
   lamp3: {
     type: Boolean,
-    default:false
+    default: false
   },
 
   device_port: {

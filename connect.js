@@ -7,12 +7,12 @@ let x = function (message, email) {
         console.log('555')
         if (err) {
             console.log("messages");
-            res.send(err)
+            res.json(err)
         } else if (!user) {
             console.log("messagessss");
             let err = new Error('User not found.')
             err.status = 401
-            res.send(err)
+            res.json(err)
         } else {
             if (message == '1') {
                 user.lamp1 = true
@@ -21,7 +21,7 @@ let x = function (message, email) {
                         console.log("messages");
                         res.json(err)
                     }
-                    
+
                 })
                 console.log(user.lamp1)
             }
@@ -32,7 +32,7 @@ let x = function (message, email) {
                         console.log("messages");
                         res.json(err)
                     }
-                    
+
                 })
                 console.log(user.lamp1)
             }
@@ -43,7 +43,7 @@ let x = function (message, email) {
                         console.log("messages");
                         res.json(err)
                     }
-                   
+
                 })
                 console.log(user.lamp2)
             }
@@ -55,7 +55,7 @@ let x = function (message, email) {
                         console.log("messages");
                         res.json(err)
                     }
-                    
+
 
                 })
                 console.log(user.lamp2)
@@ -72,7 +72,8 @@ let x = function (message, email) {
                 })
                 console.log(user.lamp3)
             }
-            else if (message == '6') { user.lamp3 = false 
+            else if (message == '6') {
+            user.lamp3 = false
                 user.save(function (err, update) {
                     if (err) {
                         console.log("messages");
