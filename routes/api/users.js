@@ -61,7 +61,7 @@ class Router {
             try {
 
               mq.connectt(user.device_url, parseInt(user.device_port), user.device_name, user.device_password, body.message, body.email)
-            } catch (err) { res.json(err) }
+            } catch (err) { res.send(err,"this email is having wrong data") }
             res.json(user)
           }
 
