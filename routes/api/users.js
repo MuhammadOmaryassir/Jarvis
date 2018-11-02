@@ -49,10 +49,12 @@ class Router {
       User.findOne({ email: email })
       .exec(function (err, user) {
         if (err) {
-          res.json(err)
+          res.send(err)
+
         } else if (!user) {
           let err = new Error('User not found.')
           err.status = 401
+          res.send(err)
         }else{
           
           mq.connectt(user.device_url , parseInt(user.device_port) , user.device_name,user.device_password,body.message,body.email)

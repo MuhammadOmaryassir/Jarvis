@@ -7,11 +7,12 @@ let x = function (message, email) {
         console.log('555')
         if (err) {
             console.log("messages");
-            res.json(err)
+            res.send(err)
         } else if (!user) {
             console.log("messagessss");
             let err = new Error('User not found.')
             err.status = 401
+            res.send(err)
         } else {
             if (message == '1') {
                 user.lamp1 = true
