@@ -46,6 +46,8 @@ class Router {
     UserRouter.post('/send', function (req, res){
       let body = _.pick(req.body, ['email','message'])
       let email = body.email
+      console.log(email)
+      console.log(body.message)
       User.findOne({ email: email })
       .exec(function (err, user) {
         if (err) {
